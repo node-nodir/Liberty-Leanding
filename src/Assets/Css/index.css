@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* rubik-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../Fonts/rubik-v26-latin-regular.woff2') format('woff2'), 
+       url('../Fonts/rubik-v26-latin-regular.woff') format('woff'); 
+}
+/* rubik-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../Fonts/rubik-v26-latin-500.woff2') format('woff2'), 
+       url('../Fonts/rubik-v26-latin-500.woff') format('woff'); 
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  max-width: 1232px;
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.nav_link{
+  position: relative; 
+  padding: 10px 0;
+}
+
+.nav_link::before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0.5px;
+  background-color: #64ffda;
+  left: 50%;
+  bottom: 0;
+  transition: all .3s ease;
+}
+
+.nav_link::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0.5px;
+  background-color: #64ffda;
+  right: 50%;
+  bottom: 0;
+  transition: all .3s ease;
+}
+
+.nav_item:hover > .nav_link::before{
+  width: 50%;
+}
+
+.nav_item:hover > .nav_link::after{
+  width: 50%;
+}
