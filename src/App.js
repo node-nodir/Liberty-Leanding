@@ -1,11 +1,13 @@
+import Course from "./Components/Course/Course";
 import Header from "./Components/Header/Header";
-import Main from "./Components/Main/Main";
+import Hero from "./Components/Hero/Hero";
 
 function App() {
   return (
     <div className="bg-[#181818]">
       <Header />
-      <Main />
+      <Hero />
+      <Course />
     </div>
   );
 }
