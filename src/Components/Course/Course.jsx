@@ -58,7 +58,7 @@ function Course() {
     <section className="course">
       <div className="container">
         <h2 className="font-serif font-normal text-white text-[35px] leading-[42px] max-w-[282px] mt-[50px] sm:mt-[120px] w-full pb-[50px]">
-          Lorem consectetur.
+          Experience <br /> and Portfolio
         </h2>
         <ul className="flex flex-wrap justify-center gap-6">
           {datas.length > 0 &&

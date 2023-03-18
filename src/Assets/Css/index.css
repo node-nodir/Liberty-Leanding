@@ -71,6 +71,27 @@ code {
     monospace;
 }
 
+/* --- Scrol Styles --- */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #F2F2F2; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #A854D4; 
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 .container {
   max-width: 1232px;
   width: 100%;

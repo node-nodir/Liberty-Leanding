@@ -9,10 +9,10 @@ import HeroMobileBg from "../../Assets/Images/hero-mobile-bg.png";
 
 function Hero() {
   return (
-    <section>
+    <section className="mt-[56px] sm:mt-[92px] pt-[120px]">
       <div className="container">
-        <div className="hero max-w-[790px] w-full mx-auto mt-[56px] sm:mt-[120px] px-[15px] sm:px-[100px] py-[15px] sm:py-[28px] rounded-md relative">
-          <h1 className="font-bold text-center text-[35px] sm:text-[60px] leading-[42px] sm:leading-[75px] text-[#FFFFFF] mb-[10px] sm:mb-5">
+        <div className="hero max-w-[790px] w-full mx-auto px-[15px] sm:px-[100px] py-[15px] sm:py-[28px] rounded-md relative">
+          <h1 className="font-bold text-center text-[35px] sm:text-[50px] leading-[42px] sm:leading-[65px] text-[#FFFFFF] mb-[10px] sm:mb-5">
             Lorem expensive
           </h1>
           <p className="text-white text-[18px] sm:text-[20px] leading-[25px] sm:leading-[30px] text-center">

@@ -20,6 +20,8 @@ function Header() {
   const [rus, setRus] = useState(false);
   const [eng, setEng] = useState(false);
   const [uzbFlag, setFlag] = useState(Uzb);
+  // ---> Others
+  const [down, setDown] = useState(false);
 
   const ChangeUzb = () => {
     setUzb(true);
@@ -44,8 +46,21 @@ function Header() {
     if (e.target.id !== "wrapper") setDrop(false);
   });
 
+  let lastScrollY = window.scrollY;
+  window.addEventListener("scroll", () => {
+    if (lastScrollY < window.scrollY) {
+      setDown(true);
+    } else {
+      setDown(false);
+    }
+  });
+
   return (
-    <header>
+    <header
+      className={`fixed top-0 left-0 w-full z-20 bg-[#181818] backdrop-blur-[25px] ${
+        down ? "border-b-[1px] border-[#A854D4]" : ""
+      }`}
+    >
       <div className="container flex items-center justify-between">
         <div className="flex items-center py-4">
           <a className="inline-block shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]" href="/">
@@ -106,7 +121,7 @@ function Header() {
                 className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
                 href="/"
               >
-                About
+                Portfolio
               </a>
             </li>
             <li className="nav_item">
@@ -114,7 +129,7 @@ function Header() {
                 className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
                 href="/"
               >
-                About
+                Experience
               </a>
             </li>
             <li className="nav_item">
@@ -122,7 +137,7 @@ function Header() {
                 className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
                 href="/"
               >
-                About
+                Contact Us
               </a>
             </li>
           </ul>

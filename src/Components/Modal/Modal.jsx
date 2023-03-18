@@ -59,17 +59,17 @@ function SiteBar({ isVisible, onClose }) {
             </li>
             <li>
               <a className="font-normal text-white text-[25px] leading-[30px]" href="/">
-                About
+                Portfolio
               </a>
             </li>
             <li>
               <a className="font-normal text-white text-[25px] leading-[30px]" href="/">
-                About
+                Experience
               </a>
             </li>
             <li>
               <a className="font-normal text-white text-[25px] leading-[30px]" href="/">
-                About
+                Contact Us
               </a>
             </li>
           </ul>
