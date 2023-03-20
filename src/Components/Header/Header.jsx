@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SiteBar from "../Modal/Modal";
+import { Link } from "react-router-dom";
 
 // ---> Images
 import Logo from "../../Assets/Images/logo.svg";
@@ -113,36 +114,36 @@ function Header() {
           <nav className="hidden md:block">
             <ul className="flex items-center space-x-[21px]">
               <li className="nav_item">
-                <a
+                <Link
+                  to="/second"
                   className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
-                  href="/"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li className="nav_item">
-                <a
+                <Link
+                  to="/second"
                   className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
-                  href="/"
                 >
                   Portfolio
-                </a>
+                </Link>
               </li>
               <li className="nav_item">
-                <a
+                <Link
+                  to="/second"
                   className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
-                  href="/"
                 >
                   Experience
-                </a>
+                </Link>
               </li>
               <li className="nav_item">
-                <a
+                <Link
+                  to="/second"
                   className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
-                  href="/"
                 >
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
