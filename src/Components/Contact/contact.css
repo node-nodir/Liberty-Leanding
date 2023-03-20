@@ -3,5 +3,13 @@
    background-repeat: no-repeat;
    background-position: left bottom;
    background-size: contain;
-   /* background-attachment: fixed; */
 }
+
+@media only screen and (max-width: 600px) {
+   .contact {
+      background-image: url("../../Assets/Images/contact-bg.png");
+      background-repeat: no-repeat;
+      background-position: 0 -450px;
+      background-size: contain;
+   }
+ }

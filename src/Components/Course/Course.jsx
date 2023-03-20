@@ -17,8 +17,10 @@ import Boot from "../../Assets/Images/boot.svg";
 import CourseCard from "../CourseCard/CourseCard";
 
 function Course() {
+  // ---> Data
   const datas = [
     {
+      id: 1,
       img: Code,
       price: "595,000 сум/месяц",
       title: "Фронтенд разработка",
@@ -26,6 +28,7 @@ function Course() {
       materialImgs: [Html, Css, Boot],
     },
     {
+      id: 2,
       img: Computer,
       price: "795,000 сум/месяц",
       title: "Основы Веб дизайна",
@@ -33,6 +36,7 @@ function Course() {
       materialImgs: [Figma, Xd, Ps],
     },
     {
+      id: 3,
       img: Speaker,
       price: "1,795,000 сум/месяц",
       title: "SMM и Таргетинга",
@@ -40,6 +44,7 @@ function Course() {
       materialImgs: [Html, Ps, Boot],
     },
     {
+      id: 4,
       img: Computer,
       price: "495,000 сум/месяц",
       title: "Основы Веб дизайна",
@@ -47,6 +52,7 @@ function Course() {
       materialImgs: [ReactJs, Xd, Css],
     },
     {
+      id: 5,
       img: Code,
       price: "1,195,000 сум/месяц",
       title: "SMM и Таргетинг",
@@ -62,12 +68,13 @@ function Course() {
         </h2>
         <ul className="flex flex-wrap justify-center gap-6">
           {datas.length > 0 &&
-            datas.map((data) => (
+            datas?.map((data) => (
               <CourseCard
+                key={data?.id}
                 img={data?.img}
+                text={data?.text}
                 price={data?.price}
                 title={data?.title}
-                text={data?.text}
                 materialImgs={data?.materialImgs}
               />
             ))}

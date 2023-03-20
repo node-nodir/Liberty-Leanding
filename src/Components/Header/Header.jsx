@@ -56,113 +56,114 @@ function Header() {
   });
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-20 bg-[#181818] backdrop-blur-[25px] ${
-        down ? "border-b-[1px] border-[#A854D4]" : ""
-      }`}
-    >
-      <div className="container flex items-center justify-between">
-        <div className="flex items-center py-4">
-          <a className="inline-block shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]" href="/">
-            <img className="w-[103px] sm:w-[124px] h-[50px] sm:h-[60px]" src={Logo} alt="logo" />
-          </a>
-          <button
-            id="wrapper"
-            onClick={() => setDrop(!drop)}
-            className="hidden relative z-0 sm:flex items-center font-serif text-base text-white ml-16"
+    <>
+      <header
+        className={`fixed top-0 left-0 w-full z-20 bg-[#181818] backdrop-blur-[25px] ${
+          down ? "border-b-[1px] border-[#A854D4]" : ""
+        }`}
+      >
+        <div className="container flex items-center justify-between">
+          <div className="flex items-center py-4">
+            <a className="inline-block shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]" href="/">
+              <img className="w-[103px] sm:w-[124px] h-[50px] sm:h-[60px]" src={Logo} alt="logo" />
+            </a>
+            <button
+              id="wrapper"
+              onClick={() => setDrop(!drop)}
+              className="hidden relative z-0 sm:flex items-center font-serif text-base text-white ml-16"
+            >
+              {<img className="w-[22px] h-[22px] mr-2" src={uzbFlag} alt="countries-flag" />}
+              {uzb ? "UZB" : rus ? "RUS" : eng ? "ENG" : ""}
+              <img
+                className={`w-6 h-6 ml-1 duration-200 ${drop ? "-rotate-180" : ""}`}
+                src={Down}
+                alt="down"
+              />
+              {/* ------ Dropdown ------ */}
+              {drop ? (
+                <ul className="absolute z-50 -left-4 top-[50px] w-[140px] bg-[#6F6F6F] rounded-[10px] duration-300">
+                  <li
+                    onClick={ChangeUzb}
+                    className="flex items-center font-light text-base text-white pt-[10px] pb-[5px] px-[10px]"
+                  >
+                    <img className="w-6 h-6 mr-2" src={Uzb} alt="country" />
+                    Uzbek
+                  </li>
+                  <li
+                    onClick={ChangeRus}
+                    className="flex items-center font-light text-base text-white py-[5px] px-[10px]"
+                  >
+                    <img className="w-6 h-6 mr-2" src={Rus} alt="country" />
+                    Russian
+                  </li>
+                  <li
+                    onClick={ChangeEng}
+                    className="flex items-center font-light text-base text-white pb-[10px] pt-[5px] px-[10px]"
+                  >
+                    <img className="w-6 h-6 mr-2" src={Eng} alt="country" />
+                    English
+                  </li>
+                </ul>
+              ) : null}
+            </button>
+          </div>
+          <nav className="hidden md:block">
+            <ul className="flex items-center space-x-[21px]">
+              <li className="nav_item">
+                <a
+                  className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
+                  href="/"
+                >
+                  About
+                </a>
+              </li>
+              <li className="nav_item">
+                <a
+                  className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
+                  href="/"
+                >
+                  Portfolio
+                </a>
+              </li>
+              <li className="nav_item">
+                <a
+                  className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
+                  href="/"
+                >
+                  Experience
+                </a>
+              </li>
+              <li className="nav_item">
+                <a
+                  className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
+                  href="/"
+                >
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <a
+            className="hidden lg:flex items-center font-serif text-base text-white hover:text-[#A854D4] duration-200 tracking-[0.48px]"
+            href="tel:+998 933354018"
           >
-            {<img className="w-[22px] h-[22px] mr-2" src={uzbFlag} alt="countries-flag" />}
-            {uzb ? "UZB" : rus ? "RUS" : eng ? "ENG" : ""}
-            <img
-              className={`w-6 h-6 ml-1 duration-200 ${drop ? "-rotate-180" : ""}`}
-              src={Down}
-              alt="down"
-            />
-            {/* ------ Dropdown ------ */}
-            {drop ? (
-              <ul className="absolute z-50 -left-4 top-[50px] w-[140px] bg-[#6F6F6F] rounded-[10px] duration-300">
-                <li
-                  onClick={ChangeUzb}
-                  className="flex items-center font-light text-base text-white pt-[10px] pb-[5px] px-[10px]"
-                >
-                  <img className="w-6 h-6 mr-2" src={Uzb} alt="country" />
-                  Uzbek
-                </li>
-                <li
-                  onClick={ChangeRus}
-                  className="flex items-center font-light text-base text-white py-[5px] px-[10px]"
-                >
-                  <img className="w-6 h-6 mr-2" src={Rus} alt="country" />
-                  Russian
-                </li>
-                <li
-                  onClick={ChangeEng}
-                  className="flex items-center font-light text-base text-white pb-[10px] pt-[5px] px-[10px]"
-                >
-                  <img className="w-6 h-6 mr-2" src={Eng} alt="country" />
-                  English
-                </li>
-              </ul>
-            ) : null}
+            <img className="w-5 h-5 mr-2" src={Call} alt="call" />
+            +998 93 335-40-18
+          </a>
+          <button onClick={() => setShowModal(true)} className="block sm:hidden">
+            <img className="w-[38px] h-[38px]" src={Burger} alt="menu-burger" />
           </button>
         </div>
-        <nav className="hidden md:block">
-          <ul className="flex items-center space-x-[21px]">
-            <li className="nav_item">
-              <a
-                className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
-                href="/"
-              >
-                About
-              </a>
-            </li>
-            <li className="nav_item">
-              <a
-                className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
-                href="/"
-              >
-                Portfolio
-              </a>
-            </li>
-            <li className="nav_item">
-              <a
-                className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
-                href="/"
-              >
-                Experience
-              </a>
-            </li>
-            <li className="nav_item">
-              <a
-                className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
-                href="/"
-              >
-                Contact Us
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <a
-          className="hidden lg:flex items-center font-serif text-base text-white hover:text-[#A854D4] duration-200 tracking-[0.48px]"
-          href="tel:+998 933354018"
-        >
-          <img className="w-5 h-5 mr-2" src={Call} alt="call" />
-          +998 93 335-40-18
-        </a>
-        <button onClick={() => setShowModal(true)} className="block sm:hidden">
-          <img className="w-[38px] h-[38px]" src={Burger} alt="menu-burger" />
-        </button>
-      </div>
 
-      {/* --- Sitebar --- */}
-
+        {/* --- Sitebar --- */}
+      </header>
       <SiteBar
         isVisible={showModal}
         onClose={() => {
           setShowModal(false);
         }}
       />
-    </header>
+    </>
   );
 }
 

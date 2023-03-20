@@ -10,7 +10,6 @@ import Arrow from "../../Assets/Images/arrow-right.svg";
 function CourseCard({ img, price, title, text, materialImgs }) {
   return (
     <Title
-      reverse={false}
       axis={null}
       style={{
         maxWidth: 384,
@@ -31,8 +30,9 @@ function CourseCard({ img, price, title, text, materialImgs }) {
             Материалы курса
           </h3>
           <div className="flex items-center flex-wrap">
-            {materialImgs.map((item) => (
+            {materialImgs.map((item, id) => (
               <img
+                key={id}
                 className="h-[80px] mr-[30px] mt-[25px] hover:scale-110 duration-200"
                 src={item}
                 alt="logos"
