@@ -3,9 +3,9 @@ import HeroSecnond from "../HeroSecnond/HeroSecnond";
 
 function SecondPage() {
   return (
-    <>
+    <div>
       <HeroSecnond />
-    </>
+    </div>
   );
 }
 
