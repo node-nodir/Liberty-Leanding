@@ -64,7 +64,7 @@ function Footer() {
             </a>
           </li>
         </ul>
-        <div className="max-w-[282px] w-full mt-[30px] sm:mt-0">
+        <div className="sm:max-w-[282px] w-full mt-[30px] sm:mt-0">
           <h3 className="font-semibold text-base text-gray-300">Congratulation</h3>
           <p className="font-medium text-[15px] leading-[18px] text-gray-300 mt-[5px]">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
