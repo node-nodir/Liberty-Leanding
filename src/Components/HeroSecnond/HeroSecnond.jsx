@@ -3,9 +3,6 @@ import React from "react";
 // ---> Css
 import "./hero.css";
 
-// ---> Images
-import Background from "../../Assets/Images/full.png";
-
 function HeroSecnond() {
   return (
     <section className="container hero2 mt-[56px] sm:mt-[92px]">
