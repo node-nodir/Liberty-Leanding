@@ -23,6 +23,7 @@ function Header() {
   // ---> Others
   const [down, setDown] = useState(false);
 
+  // ---> Change Language
   const ChangeUzb = () => {
     setUzb(true);
     setRus(false);
@@ -42,10 +43,12 @@ function Header() {
     setFlag(Eng);
   };
 
+  // ---> Close dropdown
   window.addEventListener("click", (e) => {
     if (e.target.id !== "wrapper") setDrop(false);
   });
 
+  // ---> Check scroll
   let lastScrollY = window.scrollY;
   window.addEventListener("scroll", () => {
     if (lastScrollY < window.scrollY) {

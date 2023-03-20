@@ -60,6 +60,7 @@ function Course() {
       materialImgs: [Xd, ReactJs, Ps],
     },
   ];
+
   return (
     <section className="course">
       <div className="container">
