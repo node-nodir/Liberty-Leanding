@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import AOS from "aos";
 
 // ---> Images
@@ -44,33 +45,37 @@ function SiteBar({ isVisible, onClose }) {
       >
         <div className="mt-4">
           <div className="flex items-center justify-between">
-            <a className="inline-block shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]" href="/">
+            <Link
+              to="/"
+              onClick={onClose}
+              className="inline-block shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]"
+            >
               <img className="w-[103px] h-[50px]" src={Logo} alt="logo" />
-            </a>
+            </Link>
             <button className="" onClick={onClose}>
               <img className="w-[38px] h-[38px]" src={Close} alt="menu-closer" />
             </button>
           </div>
           <ul className="my-[50px] flex flex-col items-center space-y-5">
-            <li>
-              <a className="font-normal text-white text-[25px] leading-[30px]" href="/">
+            <li onClick={onClose}>
+              <Link className="font-normal text-white text-[25px] leading-[30px]" to="/second">
                 About
-              </a>
+              </Link>
             </li>
-            <li>
-              <a className="font-normal text-white text-[25px] leading-[30px]" href="/">
+            <li onClick={onClose}>
+              <Link className="font-normal text-white text-[25px] leading-[30px]" to="/second">
                 Portfolio
-              </a>
+              </Link>
             </li>
-            <li>
-              <a className="font-normal text-white text-[25px] leading-[30px]" href="/">
+            <li onClick={onClose}>
+              <Link className="font-normal text-white text-[25px] leading-[30px]" to="/second">
                 Experience
-              </a>
+              </Link>
             </li>
-            <li>
-              <a className="font-normal text-white text-[25px] leading-[30px]" href="/">
+            <li onClick={onClose}>
+              <Link className="font-normal text-white text-[25px] leading-[30px]" to="/second">
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
           <span className="w-full h-[2px] bg-[#5A5A5A] inline-block"></span>

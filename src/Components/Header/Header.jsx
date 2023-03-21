@@ -68,9 +68,9 @@ function Header() {
       >
         <div className="container flex items-center justify-between">
           <div className="flex items-center py-4">
-            <a className="inline-block shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]" href="/">
+            <Link className="inline-block shadow-[0px 4px 4px rgba(0, 0, 0, 0.25)]" to="/">
               <img className="w-[103px] sm:w-[124px] h-[50px] sm:h-[60px]" src={Logo} alt="logo" />
-            </a>
+            </Link>
             <button
               id="wrapper"
               onClick={() => setDrop(!drop)}
