@@ -109,27 +109,12 @@ code {
   position: absolute;
   width: 0;
   height: 0.5px;
-  background-color: #A854D4;
-  left: 50%;
-  bottom: 0;
-  transition: all .3s ease;
-}
-
-.nav_link::after{
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0.5px;
-  background-color: #A854D4;
-  right: 50%;
+  background-color: #69E4A3;
+  left: 0;
   bottom: 0;
   transition: all .3s ease;
 }
 
 .nav_item:hover > .nav_link::before{
-  width: 50%;
-}
-
-.nav_item:hover > .nav_link::after{
-  width: 50%;
+  width: 100%;
 }

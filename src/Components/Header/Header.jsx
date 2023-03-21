@@ -62,8 +62,8 @@ function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-20 bg-[#181818] backdrop-blur-[25px] ${
-          down ? "border-b-[1px] border-[#A854D4]" : ""
+        className={`fixed top-0 left-0 w-full z-20 bg-[#181818] ${
+          down ? "border-b-[1px] border-[#69E4A3] opacity-95 backdrop-blur-[25px]" : ""
         }`}
       >
         <div className="container flex items-center justify-between">
@@ -116,7 +116,7 @@ function Header() {
               <li className="nav_item">
                 <Link
                   to="/second"
-                  className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
+                  className="nav_link font-serif text-lg text-white tracking-[0.48px]"
                 >
                   About
                 </Link>
@@ -124,7 +124,7 @@ function Header() {
               <li className="nav_item">
                 <Link
                   to="/second"
-                  className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
+                  className="nav_link font-serif text-lg text-white tracking-[0.48px]"
                 >
                   Portfolio
                 </Link>
@@ -132,7 +132,7 @@ function Header() {
               <li className="nav_item">
                 <Link
                   to="/second"
-                  className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
+                  className="nav_link font-serif text-lg text-white tracking-[0.48px]"
                 >
                   Experience
                 </Link>
@@ -140,7 +140,7 @@ function Header() {
               <li className="nav_item">
                 <Link
                   to="/second"
-                  className="nav_link font-serif text-lg text-white tracking-[0.48px] hover:text-[#A854D4] duration-200"
+                  className="nav_link font-serif text-lg text-white tracking-[0.48px]"
                 >
                   Contact Us
                 </Link>
@@ -148,7 +148,7 @@ function Header() {
             </ul>
           </nav>
           <a
-            className="hidden lg:flex items-center font-serif text-base text-white hover:text-[#A854D4] duration-200 tracking-[0.48px]"
+            className="hidden lg:flex items-center font-serif text-base text-white tracking-[0.48px]"
             href="tel:+998 933354018"
           >
             <img className="w-5 h-5 mr-2" src={Call} alt="call" />
