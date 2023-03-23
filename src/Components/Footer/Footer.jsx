@@ -22,7 +22,7 @@ function Footer() {
             </p>
           </div>
         </div>
-        <ul className="grid grid-cols-2 sm:grid-cols-4 gap-x-[50px] gap-y-5 mt-[30px] sm:mt-0">
+        <ul className="grid grid-cols-2 sm:grid-cols-3 gap-x-[50px] gap-y-5 mt-[30px] sm:mt-0">
           <li>
             <a className="font-normal text-base text-gray-300" href="/">
               About
@@ -41,16 +41,6 @@ function Footer() {
           <li>
             <a className="font-normal text-base text-gray-300" href="/">
               Contract
-            </a>
-          </li>
-          <li>
-            <a className="font-normal text-base text-gray-300" href="/">
-              Home
-            </a>
-          </li>
-          <li>
-            <a className="font-normal text-base text-gray-300" href="/">
-              Abroad
             </a>
           </li>
           <li>

@@ -63,7 +63,7 @@ function Header() {
     <>
       <header
         className={`fixed top-0 left-0 w-full z-20 bg-[#181818] ${
-          down ? "border-b-[1px] border-[#69E4A3] opacity-95 backdrop-blur-[25px]" : ""
+          down ? "border-b-[1px] border-[#69E4A3] opacity-95" : ""
         }`}
       >
         <div className="container flex items-center justify-between">
