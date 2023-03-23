@@ -1,5 +1,6 @@
 import React from "react";
 import HeroSecnond from "../HeroSecnond/HeroSecnond";
+import Offer from "../Offer/Offer";
 import WhyUs from "../WhyUs/WhyUs";
 
 function SecondPage() {
@@ -7,6 +8,7 @@ function SecondPage() {
     <div>
       <HeroSecnond />
       <WhyUs />
+      <Offer />
     </div>
   );
 }
